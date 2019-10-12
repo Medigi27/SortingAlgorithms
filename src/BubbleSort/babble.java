@@ -1,9 +1,9 @@
-package Bubble;
+package bubble;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Babble {
+public class babble {
     public static void main(String[] args) {
         //создаем и заполняем массив из 20-ти чисел
         List<Integer> list = new ArrayList<Integer>();
@@ -12,6 +12,7 @@ public class Babble {
             list.add(a);
         }
         //Выводим неотсортированный массив
+        System.out.println("Выводим неотсортированный массив:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
@@ -20,24 +21,25 @@ public class Babble {
         //2. Если вначале бОльшее - меняем местами
         //3. Так большее число переходит в конец списка
         //4. Цикл повторяется, пока в каждой паре левое число не будет меньше правого
-        int buffered = 0;
-        int j = 0;
-        for (int i = 0; i < list.size(); i++ ) {
 
-                for (int j; list.get(j) > list.get(j + 1); i++) {
-                    if (list.get(i) > list.get(i + 1)) {
+        for (int i = 0; i < list.size(); i++) {
+
+                for (int j = i + 1; j < list.size(); j++) {
+                    if (list.get(i) > list.get(j)) {
                         int buffered = list.get(i);
-                        list.set(i) = list.get(i + 1);
-                        list.set(i + 1) = buffered;
+                        list.set(i, (list.get(j)));
+                        list.set(j, buffered);
                     }
 
                 }
-         j++;
+
         }
         //Выводим отсортированный массив
+        System.out.println("Выводим отсортированный массив:");
         for(int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
+
 
 
 
