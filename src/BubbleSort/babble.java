@@ -1,4 +1,4 @@
-package bubble;
+package BubbleSort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,25 +30,12 @@ public class babble {
                         list.set(i, (list.get(j)));
                         list.set(j, buffered);
                     }
-
                 }
-
         }
         //Выводим отсортированный массив
         System.out.println("Выводим отсортированный массив:");
         for(int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
-
-
-
-
-
-
-
     }
-
-
-
-
 }
