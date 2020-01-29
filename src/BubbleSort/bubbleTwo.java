@@ -9,19 +9,15 @@ public class bubbleTwo {
         for (int i = 0; i < 20; i++) {
             int a = (int) (Math.random() * (200 + 1)) - 100;
             list.add(a);
-
         }
-        //Выводим неотсортированный массив
         System.out.println("Выводим неотсортированный массив:");
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
-
         }
-
-        //Сортируем пузырьком
+        //Алгоритм сортиврки "пузырьком"
         //1. Сравниваем пары чисел
         //2. Если вначале бОльшее - меняем местами
-        //3. Так большее число переходит в конец списка
+        //3. Так бОльшее число последовательно переходит в конец списка
         //4. Цикл повторяется, пока в каждой паре левое число не будет меньше правого
 
         for (int i = 0; i < list.size(); i++) {
@@ -32,17 +28,13 @@ public class bubbleTwo {
                         list.set(i, (list.get(j)));
                         list.set(j, buffered);
                     }
-
                 }
-
         }
         //Выводим отсортированный массив
         System.out.println("Выводим отсортированный массив от меньшего к большему:");
         for(int i = 0; i < list.size(); i++){
             System.out.print(list.get(i) + " ");
         }
-
-
         //сортируем массив наоборот
         for (int i = 0; i < list.size(); i++) {
 
@@ -52,26 +44,12 @@ public class bubbleTwo {
                     list.set(i, (list.get(j)));
                     list.set(j, buffered);
                 }
-
             }
-
         }
         //Выводим отсортированный массив
         System.out.println("Выводим отсортированный массив от большего к меньшему:");
         for(int i = 0; i < list.size(); i++){
             System.out.print(list.get(i) + " ");
         }
-
-
-
-
-
-
-
-
     }
-
-
-
-
 }
